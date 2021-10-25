@@ -1,0 +1,37 @@
+* {
+  margin: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  margin:0px;
+  text-align:center;
+  background-image:linear-gradient(to right bottom, rgb(255, 255, 255),rgb(219, 219, 219));
+  background-repeat: no-repeat;
+}
+h3 {
+  text-align:center;
+}
+#txt {
+  margin:0px 20px;
+  padding-top:65px;
+}
+.ts {
+  color:white;
+}
+a {
+  text-decoration:none;
+}
+a:hover {
+  color:rgb(119, 119, 119);
+}
+.flex-container {
+  display:flex;
+  justify-content:space-evenly;
+  align-items:baseline;
+  background-image:linear-gradient(to bottom right, rgb(24, 24, 24),rgb(0, 0, 0));
+  position:fixed;
+  width:100%;
+  padding-top:10px;
+}
