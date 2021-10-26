@@ -15,6 +15,7 @@ body {
   text-align:center;
   width:40%;
   float:right;
+  vertical-align:middle;
 }
 .ts {
   color:white;
