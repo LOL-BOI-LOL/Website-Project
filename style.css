@@ -40,3 +40,11 @@ img {
   float:left;
   margin:1% 7.5%;
 }
+#warning {
+  position:fixed;
+  text-align:center;
+  margin:auto;
+  width:100%;
+  display:none;
+  color:darkred;
+}
