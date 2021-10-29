@@ -11,14 +11,15 @@ body {
   background-repeat: no-repeat;
 }
 #txt {
-  margin:0px 4%;
+  margin:0px 3%;
   text-align:center;
   width:40%;
   float:right;
   vertical-align:middle;
   overflow: scroll;
   height:200px;
-  border:0.5% solid black;
+  border:0.5vw solid black;
+  padding:0.5vw;
 }
 .ts {
   color:white;
