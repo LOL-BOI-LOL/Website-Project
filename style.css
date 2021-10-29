@@ -19,12 +19,10 @@ body {
 }
 .ts {
   color:white;
+  color:rgb(119, 119, 119);
 }
 a {
   text-decoration:none;
-}
-a:hover {
-  color:rgb(119, 119, 119);
 }
 .flex-container {
   display:flex;
