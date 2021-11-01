@@ -1,6 +1,18 @@
 time = 10;
 warn = 0;
-function ChangeColor(colour) {
+img = document.getElementById('image');
+function flip() {
+  for(i=0;i<360;i++) {
+    setTimeout(turn,10*i);
+  }
+}
+function turn() {
+  if(img.style.transform == '') {
+    img.style.transform = 'rotate(0deg)';
+  }
+  img.style.transform = "rotate(".concat((parseInt(img.style.transform.split("(").pop().split("d").shift())+1).toString().concat("deg)"));
+}
+function changeColor(colour) {
   document.getElementById("body").style.background = colour;
 }
 function randomHEX() {
@@ -24,14 +36,14 @@ function randomHEX() {
     }
     color2 = color2.concat(color3);
   }
-  ChangeColor(color2);
+  changeColor(color2);
 }
 function epilepsy() {
   warning();
 }
 function cancel() {
   clearInterval(e);
-  ChangeColor('white');
+  changeColor('white');
 }
 function slowing() {
   randomHEX();
@@ -40,7 +52,7 @@ function slowing() {
     time += 10;
   }else{
     time = 10;
-    ChangeColor('white');
+    changeColor('white');
   }
 }
 function warning() {
