@@ -1,3 +1,23 @@
+const imgEnlarged = document.getElementById('imgEnlarged');
+const divPopUp = document.getElementById('divPopUp');
+const divBlur = document.getElementById('divBlur');
+const imgs = document.getElementsByTagName('IMG');
+divBlur.addEventListener('click', scrnUnblur);
+for(i = 0; i < imgs.length; i++) {
+  imgs[i].addEventListener('click', enlargeImg);
+}
+function scrnUnblur() {
+  divPopUp.style.display = 'none';
+  divBlur.style.display = 'none';
+  imgEnlarged.src = '';
+  imgEnlarged.margin = '';
+}
+function enlargeImg() {
+  imgEnlarged.src = this.src;
+  divPopUp.style.display = 'block';  
+  divBlur.style.display = 'block';
+  imgEnlarged.style.margin = (((window.innerHeight - parseInt(window.getComputedStyle(imgEnlarged).height.split('p').shift()))/2)-1).toString() + 'px ' + ((((window.innerWidth - parseInt(window.getComputedStyle(imgEnlarged).width.split('p').shift()))/2)-1).toString() + 'px');
+}
 time = 10;
 warn = 0;
 img = document.getElementById('image');
