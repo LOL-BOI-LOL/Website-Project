@@ -2,7 +2,9 @@ const imgEnlarged = document.getElementById('imgEnlarged');
 const divPopUp = document.getElementById('divPopUp');
 const divBlur = document.getElementById('divBlur');
 const imgs = document.getElementsByTagName('IMG');
+
 divBlur.addEventListener('click', scrnUnblur);
+
 for(i = 0; i < imgs.length; i++) {
   imgs[i].addEventListener('click', enlargeImg);
 }
@@ -18,20 +20,10 @@ function enlargeImg() {
   divBlur.style.display = 'block';
   imgEnlarged.style.margin = (((window.innerHeight - parseInt(window.getComputedStyle(imgEnlarged).height.split('p').shift()))/2)-1).toString() + 'px ' + ((((window.innerWidth - parseInt(window.getComputedStyle(imgEnlarged).width.split('p').shift()))/2)-1).toString() + 'px');
 }
-time = 10;
-warn = 0;
-img = document.getElementById('image');
-function flip() {
-  for(i=0;i<360;i++) {
-    setTimeout(turn,10*i);
-  }
-}
-function turn() {
-  if(img.style.transform == '') {
-    img.style.transform = 'rotate(0deg)';
-  }
-  img.style.transform = "rotate(".concat((parseInt(img.style.transform.split("(").pop().split("d").shift())+1).toString().concat("deg)"));
-}
+
+const time = 10;
+const warn = 0;
+
 function changeColor(colour) {
   document.getElementById("body").style.background = colour;
 }
